@@ -37,3 +37,12 @@ def set_up_password(password)
 		"invalid"
 	end
 end
+
+def set_up_password2(password2, password)
+	password2 = password2.to_s
+	if password == password2
+		"correct password"
+	else
+		"invalid"
+	end
+end
