@@ -29,3 +29,11 @@ def set_up_email2(email2, email)
 		end
 	end
 
+def set_up_password(password)
+	password = password.to_s
+	if password.length > 8
+		"correct password"
+	else
+		"invalid"
+	end
+end

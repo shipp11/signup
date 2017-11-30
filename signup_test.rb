@@ -36,5 +36,10 @@ class TestSignup < Minitest::Test
 		email2 = "shippdaddy1123@aim.com"
 		assert_equal("correct email", set_up_email2(email2, email))
 	end
+
+	def test_assert_that_password_is_8_char_1_uppercase_1_lowercase_1_special_char_and_1_number
+		password = "Trick1123@"
+		assert_equal("correct password", set_up_password(password))
+	end
 end
 
