@@ -18,3 +18,14 @@ def set_up_email(email)
 		"invalid"
 	end
 end
+
+
+def set_up_email2(email2, email)
+		email2 = email2.to_s
+		if email == email2
+			"correct email"
+		else
+			"invalid"
+		end
+	end
+
