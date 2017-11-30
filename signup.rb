@@ -6,3 +6,15 @@ def set_up_username(username)
 		"invalid"
 	end
 end
+
+
+
+
+def set_up_email(email)
+	email = email.to_s
+	if email.length > 8
+		"valid"
+	else
+		"invalid"
+	end
+end
