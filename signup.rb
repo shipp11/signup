@@ -13,7 +13,7 @@ end
 def set_up_email(email)
 	email = email.to_s
 	if email.length > 8
-		"valid"
+		"correct email"
 	else
 		"invalid"
 	end

@@ -27,7 +27,7 @@ class TestSignup < Minitest::Test
 	end
 
 	def test_assert_that_correct_email_is_valid
-		username = "shippdaddy1123@aim.com"
-		assert_equal("correct email", set_up_username(username))
+		email = "shippdaddy1123@aim.com"
+		assert_equal("correct email", set_up_email(email))
 	end
 end
