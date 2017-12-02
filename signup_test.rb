@@ -47,5 +47,11 @@ class TestSignup < Minitest::Test
 		password2 = "Trick1123@"
 		assert_equal("correct password", set_up_password2(password2, password))
 	end
+
+	def test_assert_that_password_is_invalid
+		password = "Trick3211"
+		password2 = "trick1123"
+		assert_equal("invalid", set_up_password2(password2, password))
+	end
 end
 

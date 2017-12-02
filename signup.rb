@@ -31,7 +31,7 @@ def set_up_email2(email2, email)
 
 def set_up_password(password)
 	password = password.to_s
-	if password.length > 8
+	if password.length > 8 
 		"correct password"
 	else
 		"invalid"
