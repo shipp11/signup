@@ -31,7 +31,7 @@ def set_up_email2(email2, email)
 
 def set_up_password_length(password)
 	
-	if password.length > 7 and
+	if password.length > 7
 		"valid"
 	else
 		"invalid"
