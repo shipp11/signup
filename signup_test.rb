@@ -53,5 +53,15 @@ class TestSignup < Minitest::Test
 		password2 = "trick1123"
 		assert_equal("invalid", set_up_password2(password2, password))
 	end
-end
 
+	def test_assert_that_password_is_8_char_1_uppercase_1_lowercase_1_special_char_and_1_number
+		password = "Trick1123@"
+		assert_equal("very strong", set_up_password_cap(password))
+	end
+
+	def test_assert_that_password_needs_a_cap
+		password = "trick1123@"
+		assert_equal("too weak", set_up_password_cap(password))
+	
+	end
+end

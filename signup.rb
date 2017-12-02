@@ -30,11 +30,7 @@ def set_up_email2(email2, email)
 	end
 
 def set_up_password_length(password)
-	cap = [*('A'..'Z')]
-	lower = [*('a'..'z')]
-	special = ["!", "@", "#", "$", "%", "^", "&", "*", ":", "."]
-	numbers = [*('0'..'9')] 
-	password = password.to_s
+	
 	if password.length > 7 and
 		"valid"
 	else
@@ -43,9 +39,19 @@ def set_up_password_length(password)
 end
 
 def set_up_password_cap(password)
+	cap = [*('A'..'Z')]
+	lower = [*('a'..'z')]
+	special = ["!", "@", "#", "$", "%", "^", "&", "*", ":", "."]
+	numbers = [*('0'..'9')] 
+	password = password.to_s
 	if set_up_password_length(password) == "valid"
-		set_up_password_length(password)
-		character = password.split('')
+		 puts password
+		has_cap = "invaild"
+		has_lower = "invalid"
+		has_special = "invaild"
+		has_number = "invaild"
+		character = password.split(//)
+		puts character
 		character.each do |letter|
 			if cap.include?(letter) == true
 				has_cap = "valid"
@@ -56,15 +62,12 @@ def set_up_password_cap(password)
 			if special.include?(letter) == true
 				has_special = "valid"
 			end
-			if number.include?(letter) == true
+			if numbers.include?(letter) == true
 				has_number = "valid"
 			end
 		end
 	end
-	if has_cap = "valid" and
-		has_lower = "valid" and
-		has_special = "valid" and
-		has_number = "valid" 
+	if has_cap == "valid" && has_lower == "valid" && has_special == "valid" && has_number == "valid" 
 		"very strong"
 	else
 		"too weak"
